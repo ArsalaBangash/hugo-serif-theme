@@ -1,12 +1,12 @@
 .feature {
   height: 100%;
-  border: 2px solid #eaeaea;
   padding: 20px;
   background-color: #ffffff;
   display: flex;
   align-items: center;
   flex-direction: column;
   text-align: center;
+  border-radius: 16px;
   .feature-image {
     flex: 0 0 auto;
     width: 80px;

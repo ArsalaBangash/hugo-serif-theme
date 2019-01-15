@@ -60,6 +60,8 @@
 @import 'components/strip';
 @import 'components/whitebox';
 @import 'components/feature';
+@import 'components/instructors';
+
 
 // Pages
 @import 'pages/home';
@@ -71,6 +73,8 @@
 @import 'pages/services/page-services-single';
 @import 'pages/services/service-summary';
 
+@import 'spacing';
+
 body {
   font-size: 1rem;
   font-family: $font-family-base;
@@ -78,7 +82,15 @@ body {
   // -moz-osx-font-smoothing: grayscale;
   // -webkit-text-size-adjust: 100%;
   // -ms-text-size-adjust: 100%;
+  .circle-border {
+    border-radius: 50%;
+  }
 }
+
+$primary: hsl(360, 71%, 66%)
+
+
+
 
 // Display breakpoints for DEV
 // body:after {

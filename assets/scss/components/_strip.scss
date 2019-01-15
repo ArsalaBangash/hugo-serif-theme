@@ -54,3 +54,14 @@
 .strip-bg-cover {
   background-size: cover;
 }
+
+.strip-instructors {
+  background-color: hsl(360, 77%, 78%);
+}
+
+.instructors-heading {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: white;
+  font-family: $font-family-heading;
+}
