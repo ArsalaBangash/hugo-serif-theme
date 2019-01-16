@@ -1,0 +1,107 @@
+.wwd-title {
+    color: $primary;
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+    font-family: $font-family-heading;
+  }
+
+  .wwd-subtitle {
+    color: hsl(360, 77%, 78%);
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+.wwd-text {
+    font-size: 1.6rem;
+    font-weight: 400;
+    max-width: 550px;
+    line-height: 1.5;
+    color: $secondary;
+    margin-top: 1.2rem;
+  }
+
+  .wwd-desc-text {
+    font-size: 1.2rem;
+    font-weight: 400;
+    max-width: 550px;
+    line-height: 1.5;
+    color: $secondary;
+    margin-top: 1.2rem;
+  }
+
+.wwd-content {
+    width: 100%;
+    align-self: flex-start;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.wwd-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.wwd-image {
+    width: 100%;
+    border-radius: 24px;
+    height: auto;
+    @include media-breakpoint-up(sm) {
+        width: 100%;
+      }
+      @include media-breakpoint-up(md) {
+        width: 100%;
+      }
+      @include media-breakpoint-up(lg) {
+        width: 550px;
+      }
+      @include media-breakpoint-up(xl) {
+        width: 550px;
+      }
+}
+
+.my-hr {
+    width: 200px;
+    height: 5px;
+    border-radius:8px;
+    background-color: $primary;
+}
+
+.wwd-tools {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: center;
+    font-size: 96px;
+    font-weight: 400;
+    color: gray;
+    @include media-breakpoint-up(sm) {
+        width: 100%;
+      }
+      @include media-breakpoint-up(md) {
+        width: 100%;
+      }
+      @include media-breakpoint-up(lg) {
+        width: 550px;
+      }
+      @include media-breakpoint-up(xl) {
+        width: 550px;
+      }
+}
+
+.wwd-tool {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 200px;
+}
+
+.wwd-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    fill: $primary;
+}

@@ -13,11 +13,25 @@
   </div>
 </div>
 
-<div class="container pb-6 pb-md-10">
+<!-- <div class="container pb-6 pb-md-10">
   <div class="row">
     {{ range .Pages.ByWeight }}
     <div class="col-12 col-md-6 mb-2 ">{{ .Render "summary" }}</div>
     {{ end }}
   </div>
+</div> -->
+
+<div class="wwd-container mt-4">
+  {{ range $index, $element := .Site.Data.what_we_do.items }}
+  <div class="mr-2">
+    <span class="wwd-subtitle">
+      <img class="wwd-icon" src="{{ .icon }}" />{{ .title }}
+    </span>
+    <p class="wwd-desc-text">
+      {{ .description }}
+    </p>
+
+  </div>
+  {{ end }}
 </div>
 {{ end }}

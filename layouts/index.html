@@ -2,17 +2,78 @@
 {{ define "header_css" }}{{ end }}
 {{ define "body_classes" }}page-home{{ end }}
 {{ define "header_classes" }}header-transparent{{ end }}
-{{ define "meta"}}<meta name="description" content="Project Include's Home Page">{{ end }}
+{{ define "meta"}}
+<meta name="description" content="Project Include's Home Page">{{ end }}
 
 {{ define "main" }}
 
-<div class="intro pb-4">
+<div class="intro pb-4 mb-3">
   <div class="container">
-    {{ .Content }}
+    <h1>{{ .Site.Data.home.title }}</h1>
+    <p>{{ .Site.Data.home.subtitle }}</p>
   </div>
 </div>
 
-{{ $services := where (where .Site.RegularPages "Type" "services") ".Params.featured" true }}
+<div class="strip strip-instructors p-4">
+  <h1 class="welcome-title">{{ .Site.Data.home.welcome_title }}</h1>
+  <div class="welcome-content mt-4">
+    <p class="welcome-subtitle">{{ .Site.Data.home.welcome_subtitle }}</p>
+    <div id="slideshow">
+      <figure class="image">
+        <img ref="slideshowImage" alt="Description">
+      </figure>
+    </div>
+  </div>
+</div>
+
+<div class="container pb-3 pt-3">
+  <h1 class="wwd-title mb-1">{{ .Site.Data.what_we_do.title }}</h1>
+  <p class="wwd-text">{{ .Site.Data.what_we_do.subtitle }}</p>
+
+  <div class="wwd-container mt-4">
+    {{ range $index, $element := .Site.Data.what_we_do.items }}
+    <div class="mr-2">
+      <span class="wwd-subtitle">
+        <img class="wwd-icon" src="{{ .icon }}" />{{ .title }}
+      </span>
+      <p class="wwd-desc-text">
+        {{ .description }}
+      </p>
+
+    </div>
+    {{ end }}
+  </div>
+
+
+  <!-- <div class="wwd-content">
+    <p class="wwd-text">
+      We partner with schools and libraries in the GTA to deliver coding workshops and bootcamps!
+    </p>
+    <div class="wwd-tools">
+        <i class="wwd-tool fab fa-html5"></i>
+        <i class="wwd-tool fab fa-python"></i>
+        <i class="wwd-tool fab fa-css3"></i>
+        <i class="wwd-tool fab fa-js"></i>
+        <i class="wwd-tool fab fa-java"></i>
+    </div>
+  </div> -->
+
+</div>
+
+<!-- <div class="m-8 welcome-container">
+  <h1 class="welcome-title">{{ .Site.Data.home.welcome_title }}</h1>
+  <div class="welcome-content">
+    <div class="welcome-image mr-2">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGTVf63Vm3XgOncMVSOy0-jSxdMT8KVJIc8WiWaevuWiPGe0Pm">
+    </div>
+    <div class="welcome-text ml-2">
+      <p class="welcome-subtitle">{{ .Site.Data.home.welcome_subtitle }}</p>
+    </div>
+  </div>
+</div> -->
+
+
+<!-- {{ $services := where (where .Site.RegularPages "Type" "services") ".Params.featured" true }}
 {{if gt (len $services) 0}}
 <div class="container pt-8 pt-md-12 pb-md-12">
   <div class="row justify-content-start">
@@ -30,25 +91,26 @@
     </div>
   </div>
 </div>
-{{end}}
+{{end}} -->
 
 <div class="strip strip-instructors">
-<div class="container pt-5 pb-5 pt-md-8 pb-md-8">
-  <div class="row justify-content-center">
+  <div class="container pt-5 pb-5 pt-md-8 pb-md-8">
     <div class="col-12">
       <h2 class="text-center mb-4 instructors-heading">Meet some of our instructors</h2>
     </div>
-    {{ range .Site.Data.instructors }}
-    <div class="col-12 col-md-6 col-lg-4 mb-2">
-      <div class="instructor">
-        {{ if .image }}<div class="instructor-image"><img class="circle-border" alt="{{ .title }} logo" src="{{ .image }}" /></div> {{ end }}
-        <h2 class="instructor-title">{{ .title }}</h2>
-        <div class="instructor-content">{{ .description }}</div>
+    <div class="row justify-content-center">
+      {{ range $index, $element := .Site.Data.instructors }}
+      <div class="mb-2 mr-3 ml-3">
+        <div class="instructor">
+          {{ if .image }}<div class="instructor-image"><img class="circle-border" alt="{{ .title }} logo" src="{{ .image }}" /></div>
+          {{ end }}
+          <h2 class="instructor-title">{{ .title }}</h2>
+          <div class="instructor-content">{{ .description }}</div>
+        </div>
       </div>
+      {{ end }}
     </div>
-    {{end}}
   </div>
-</div>
 </div>
 {{ end }}
 

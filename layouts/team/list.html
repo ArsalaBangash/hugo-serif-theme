@@ -10,13 +10,32 @@
     </div>
   </div>
 </div>
-
+<!-- 
 <div class="container pb-6">
   <div class="row">
     {{ range.Pages.ByWeight }}
     <div class="col-12 col-md-6 mb-2 ">{{ .Render "summary" }}</div>
     {{ end }}
   </div>
-</div>
+</div> -->
 
+<div class="strip strip-instructors">
+    <div class="container pt-5 pb-5 pt-md-8 pb-md-8">
+      <div class="col-12">
+        <h2 class="text-center mb-4 instructors-heading">Meet some of our instructors</h2>
+      </div>
+      <div class="row justify-content-center">
+        {{ range $index, $element := .Site.Data.instructors }}
+        <div class="mb-2 mr-3 ml-3">
+          <div class="instructor">
+            {{ if .image }}<div class="instructor-image"><img class="circle-border" alt="{{ .title }} logo" src="{{ .image }}" /></div>
+            {{ end }}
+            <h2 class="instructor-title">{{ .title }}</h2>
+            <div class="instructor-content">{{ .description }}</div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
 {{ end }}

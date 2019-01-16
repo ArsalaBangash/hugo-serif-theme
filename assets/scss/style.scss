@@ -35,7 +35,7 @@
 // @import "bootstrap/modal";
 // @import "bootstrap/tooltip";
 // @import "bootstrap/popover";
-// @import "bootstrap/carousel";
+@import "bootstrap/carousel";
 // @import "bootstrap/print";
 @import 'bootstrap/utilities';
 
@@ -61,6 +61,8 @@
 @import 'components/whitebox';
 @import 'components/feature';
 @import 'components/instructors';
+@import 'components/welcome';
+@import 'components/whatwedo';
 
 
 // Pages
@@ -85,6 +87,66 @@ body {
   .circle-border {
     border-radius: 50%;
   }
+
+  /* Fading animation */
+.fade-in {
+  -webkit-animation-name: fade-in;
+  -webkit-animation-duration: 0.4s;
+  animation-name: fade-in;
+  animation-duration: 0.4s;
+}
+
+.fade-out {
+  -webkit-animation-name: fade-out;
+  -webkit-animation-duration: 0.4s;
+  animation-name: fade-out;
+  animation-duration: 0.4s;
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    opacity: 1;
+    scale: 1;
+  }
+  to {
+    opacity: 0;
+    scale: 0;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    scale: 1;
+  }
+  to {
+    opacity: 0;
+    scale: 0;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+    scale: 0;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    scale: 0;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
 }
 
 $primary: hsl(360, 71%, 66%)
