@@ -7,22 +7,24 @@
 
 {{ define "main" }}
 
-<div class="intro pb-4 mb-3">
-  <div class="container">
-    <h1>{{ .Site.Data.home.title }}</h1>
-    <p>{{ .Site.Data.home.subtitle }}</p>
+<div class="intro pb-1 pl-2 pr-2">
+  <div class="intro-content">
+    <div>
+      <h1>{{ .Site.Data.home.title }}</h1>
+      <p>{{ .Site.Data.home.subtitle }}</p>
+    </div>
+    <div id="slideshow">
+      <figure class="image" style="min-height: 285px;">
+        <img ref="slideshowImage" alt="Description">
+      </figure>
+    </div>
   </div>
 </div>
 
 <div class="strip strip-instructors p-4">
   <h1 class="welcome-title">{{ .Site.Data.home.welcome_title }}</h1>
-  <div class="welcome-content mt-4">
+  <div class="welcome-content mt-2">
     <p class="welcome-subtitle">{{ .Site.Data.home.welcome_subtitle }}</p>
-    <div id="slideshow">
-      <figure class="image">
-        <img ref="slideshowImage" alt="Description">
-      </figure>
-    </div>
   </div>
 </div>
 
