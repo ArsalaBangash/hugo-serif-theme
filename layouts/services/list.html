@@ -3,12 +3,16 @@
 {{ define "header_classes" }}{{ end }}
 
 {{ define "main" }}
-<div class="intro">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        {{ .Content }}
-      </div>
+<div class="intro pl-2 pr-2">
+  <div class="intro-content">
+    <div>
+      <h1>{{ .Site.Data.what_we_do.title }}</h1>
+      <p>{{ .Site.Data.what_we_do.subtitle }}</p>
+    </div>
+    <div style="text-align: center;margin-top: 32px;">
+      <figure class="image" style="min-height: 290px;">
+        <img class="welcome-image" src="{{ .Site.Data.what_we_do.image }}" alt="Description">
+      </figure>
     </div>
   </div>
 </div>

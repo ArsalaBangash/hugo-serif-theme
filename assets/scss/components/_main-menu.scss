@@ -19,6 +19,8 @@
         text-decoration: none;
         color: $primary;
         border-radius: 48px;
+        transition: all 0.3s ease-out;
+
         &:hover {
           background: $primary;
           color: #ffffff;
